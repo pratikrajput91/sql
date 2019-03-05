@@ -1,0 +1,39 @@
+1)select location_id,street_address,city,state_province,country_name from locations
+    -> INNER JOIN countries
+    -> ON countries.country_id=locations.country_id;
+
+
+2)select employees.last_name,employees.department_id,departments.department_name from employees
+    -> join departments
+    -> on employees.department_id=departments.department_id;
+
+3)select a.last_name as employee,a.employee_id as Emp#,b.last_name as manager,b.employee_id as mgr#
+    -> from employees a,employees b
+    -> where b.employee_id=a.manager_id;
+
+4)select a.last_name,a.department_id,b.last_name as colleges
+    -> from employees a,employees b
+    -> where a.department_id=b.department_id;
+
+5)select last_name,hire_date from employees
+    -> where department_id=80 and last_name!="zlotkey";
+
+6)select employee_id, last_name,salary from employees
+    -> where salary>(select avg(salary) from employees)
+    -> order by salary;
+
+7)
+
+
+
+8)select employees.last_name,employees.employee_id,departments.department_id from employees
+    -> join departments
+    -> on employees.department_id=departments.department_id
+    -> where location_id=1700;
+
+9)join departments
+    -> on employees.department_id=departments.department_id
+    -> where department_name="executive";
+
+10)
+
